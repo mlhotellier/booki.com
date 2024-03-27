@@ -20,8 +20,8 @@
             <nav>
                 <img src="images/logo/Booki.png" alt="logo Booki">
                 <ul id="menu">
-                    <li><a href="#">Hébergements</a></li>
-                    <li><a href="#">Activités</a></li>
+                    <li><a href="#hebergements">Hébergements</a></li>
+                    <li><a href="#activite">Activités</a></li>
                 </ul>
             </nav>
         </header>
@@ -31,14 +31,12 @@
                     <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                     <p>En plein centre-ville ou en pleine nature</p>
                 </div>
-                <div class="search-bar">
+                <form method="get" action="" class="search-bar">
                     <i class="fa-solid fa-location-dot"></i>
                     <input type="text" id="recherche" name="recherche" value="Marseille, France" placeholder="Rechercher">
                     <button type="submit" class="desktop">Rechercher</button>
-                    <span class="mobile">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                </div>
+                    <button type="submit" class="mobile"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
                 <p id="responsive">Filtres</p>
                 <div class="filter-bar">
                     <p>Filtres</p>
@@ -48,10 +46,11 @@
                     <div class="filter-btn"><p><i class="fa-solid fa-fire"></i>nos pépites</p></div>
                 </div>
                 <div class="infobar">
-                    <p><i class="fa-solid fa-info"></i> Plus de 500 logements sont disponibles dans cet ville</p>
+                    <span><i class="fa-solid fa-info"></i></span>
+                    <p>Plus de 500 logements sont disponibles dans cet ville</p>
                 </div>
             </section>
-            <div class="hebergements-and-populaires">
+            <div id="hebergements" class="hebergements-and-populaires">
                 <section class="hebergements">
                     <div>
                         <h2 class="section-title">Hébergements à Marseille</h2>
@@ -174,7 +173,7 @@
                             </article>
                         </a>
                     </div>
-                    <p class="cta-voir-plus"><a>Afficher plus</a></p>
+                    <p class="cta-voir-plus"><a href="#">Afficher plus</a></p>
                 </section>
                 <section class="populaires">
                     <div class="populaires-title">
@@ -242,7 +241,7 @@
                     </div>
                 </section>
             </div>
-            <section class="activite">
+            <section id="activite" class="activite">
                 <div>
                     <h2 class="section-title">Activités à Marseille</h2>
                 </div>
@@ -293,19 +292,19 @@
         <footer>
             <div>
                 <p>A propos</p>
-                <p>Fonctionnement du site</p>
-                <p>Conditions générales</p>
-                <p>Données et confidentialités</p>
+                <p><a href="#">Fonctionnement du site</a></p>
+                <p><a href="#">Conditions générales</a></p>
+                <p><a href="#">Données et confidentialités</a></p>
             </div>
             <div>
                 <p>Nos hébergements</p>
-                <p>Charte qualité</p>
-                <p>Proposer votre hôtel</p>
+                <p><a href="#">Charte qualité</a></p>
+                <p><a href="#">Proposer votre hôtel</a></p>
             </div>
             <div>
-                <p>Assistance</p>
-                <p>Centre d'aide</p>
-                <p>Nous contacter</p>
+                <p><a href="#">Assistance</a></p>
+                <p><a href="#">Centre d'aide</a></p>
+                <p><a href="#">Nous contacter</a></p>
             </div>
             
         </footer>

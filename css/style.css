@@ -13,6 +13,10 @@
     color: var(--main-color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -22,6 +26,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    min-width: 320px;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -40,8 +45,10 @@ a {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1)); }
+    .card:hover {
+        box-shadow: 0px 0px 4px #0065FC;
+    }
 
 .card img {
     object-fit: cover;
@@ -93,6 +100,11 @@ header nav img {
     color: #0065FC;
     padding-top:14px;
   }
+  .navigation-bar li:hover a {
+    border-top: #0065FC 2px solid;
+    color: #0065FC;
+    padding-top:14px;
+  }
   #menu {
     float: right;
     margin-top:16px; }
@@ -127,7 +139,7 @@ header nav img {
         border-radius: 0;
         padding:14px 24px;
         outline: none; }  
-    .search-bar button {
+    .search-bar button:first-of-type {
         padding: 14px 16px;
         background-color: #007bff;
         color: white;
@@ -137,6 +149,9 @@ header nav img {
         font-size: 18px;
         font-weight:bold;
         cursor: pointer; }
+        .search-bar button:first-of-type:hover {
+            background-color: #00448d;
+            border:1px solid #00448d;  }
         .desktop {
             display: inline-block;}
         .mobile {
@@ -168,13 +183,19 @@ header nav img {
     margin-top: 35px;
     margin-bottom: 20px;}
 
+.infobar {
+    display:flex;
+    align-items: center;}    
 .infobar p {
     margin: 0;}
-.infobar i {
-    border : 2px solid #d9d9d9;
+.infobar span {
+    border : 1px solid #d9d9d9;
+    box-sizing: border-box;
     border-radius:50%;
-    padding: 7px 12px; 
     margin-right:10px; }
+    .infobar span i {
+        font-size:14px;
+        padding: 5px 9px;}
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
@@ -244,8 +265,9 @@ header nav img {
     font-weight: bold;
     font-size: 18px;
     margin-top: 30px;
-    margin-bottom: 2.5px;
-}
+    margin-bottom: 2.5px;}
+    .hebergements .cta-voir-plus:hover{
+        color:#0065FC;}
 
 /****** Populaires ***********/
 .populaires {
@@ -347,6 +369,8 @@ footer {
         font-size: 18px;
         font-weight: bold;
     }
+    footer a:hover {
+        text-decoration: underline;    }
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -415,7 +439,11 @@ footer {
                 border-bottom: 2px solid #0065FC;}
             .navigation-bar li:last-of-type{
                 border-bottom: 2px solid #f2f2f2;}
+            .navigation-bar li:last-of-type:hover{
+                border-bottom: 2px solid #0065FC;}
             .navigation-bar li:first-child a {
+                border: none; }
+            .navigation-bar li:hover a {
                 border: none; }
     
     #menu {
@@ -434,9 +462,24 @@ footer {
     .info-group{
         padding:0 20px; }
     .mobile {
-        display: inline-block;}
+        margin-left: -15px;
+        display: inline-block;
+        padding: 0;
+        border:none;
+        background-color: transparent ;}
     .desktop {
         display: none;}
+
+    .search-bar button>i:last-of-type{
+        background-color: #0065FC;
+        border: 2px solid #0065FC;
+        padding: 16px;
+        color: #ffffff;
+        box-shadow: 0 4px 4px#00000040;
+        border-radius: 15px}
+        .search-bar button>i:last-of-type:hover{
+            background-color: #00448d;
+            border: 2px solid #00448d; }
 
     .filter-bar .filter-btn {
         flex: 1 0 50%; /* Chaque bouton occupe 50% de la largeur de son conteneur (2 boutons par ligne) */
@@ -450,17 +493,25 @@ footer {
             margin: 10px 5px 0 0 }
         .filter-bar .filter-btn:last-of-type{
             margin: 10px 0 0 5px; }
+        .filter-bar .filter-btn p {
+            font-size: 14px; }
 
+    .infobar {
+        display:flex;
+        flex-direction:row;
+        align-items: center;}
+    
     .hebergements-and-populaires {
         flex-direction: column-reverse;
     }
 
     .hebergements-and-populaires section {
-        border-radius:0; }
+        border-radius:0;
+        margin-top:0; }
         .hebergements-and-populaires section:nth-of-type(1){
             background-color: #ffffff;
             padding:20px 30px;
-        }
+            margin-top:15px;}
     
     .populaires-cards {
         flex-direction: column; }
@@ -495,8 +546,11 @@ footer {
             width: calc(100% - 60px);
             padding: 30px}
             footer div:nth-child(2){
-                padding: 20px 30px; /* Ajustement du padding pour le bloc du milieu */}
-
+                padding: 20px 30px;
+            }
 }
+
+
+/****** end  ******/
 
 
