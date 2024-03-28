@@ -93,7 +93,6 @@ header nav img {
   .navigation-bar li a {
     color: black;
     font-size: 16px;
-    font-family: 'Raleway', sans-serif;
   }
   .navigation-bar li:hover a {
     border-top: #0065FC 2px solid;
