@@ -95,11 +95,6 @@ header nav img {
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
   }
-  .navigation-bar li:first-child a {
-    border-top: #0065FC 2px solid;
-    color: #0065FC;
-    padding-top:14px;
-  }
   .navigation-bar li:hover a {
     border-top: #0065FC 2px solid;
     color: #0065FC;
@@ -435,14 +430,10 @@ footer {
             width:100%;
             margin:0;
             padding-bottom:15px}
-            .navigation-bar li:first-of-type{
-                border-bottom: 2px solid #0065FC;}
-            .navigation-bar li:last-of-type{
+            .navigation-bar li{
                 border-bottom: 2px solid #f2f2f2;}
-            .navigation-bar li:last-of-type:hover{
+            .navigation-bar li:hover{
                 border-bottom: 2px solid #0065FC;}
-            .navigation-bar li:first-child a {
-                border: none; }
             .navigation-bar li:hover a {
                 border: none; }
     
@@ -481,6 +472,8 @@ footer {
             background-color: #00448d;
             border: 2px solid #00448d; }
 
+    .filter-bar {
+        justify-content: space-around;}
     .filter-bar .filter-btn {
         flex: 1 0 50%; /* Chaque bouton occupe 50% de la largeur de son conteneur (2 boutons par ligne) */
         max-width: calc(48% - 5px); /* Limite la largeur maximale de chaque bouton à 50% */
