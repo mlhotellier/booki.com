@@ -413,6 +413,15 @@ footer {
     #responsive {
         display: block;
     }
+
+    .activite-cards .card {
+        height:270px;    }
+    .activite-cards img {
+        height:200px; }
+    .activite-cards .card-content {
+        padding: 25.5px 19px;}
+        .activite-cards a:nth-of-type(3) .card-content, .activite-cards a:nth-of-type(4) .card-content {
+        padding: 16px 19px; }
 }
 
 /* Small devices (phones, less than 768px) */
